@@ -1,15 +1,15 @@
-import { Actions } from "../../components/actions/Actions";
+import { Info } from "../info/Info";
 import { Keyboard } from "../keyboard/Keyboard";
-import { Info } from "../info/info";
+import { Actions } from "../actions/Actions";
 
-function App() {
+export function App() {
   return (
     <>
       <Info></Info>
-      <Actions></Actions>
-      <Keyboard></Keyboard>
+      <main className="phone">
+        <Keyboard></Keyboard>
+        <Actions></Actions>
+      </main>
     </>
   );
 }
-
-export default App;
