@@ -1,15 +1,14 @@
-import { useContext } from "react";
-import { Context } from "../../context/context";
+// import { useContext } from "react";
+// import { Context } from "../../context/context";
 
 export function Info() {
-  const {
-    phoneContext: { handleChange },
-  } = useContext(Context);
-  const phoneNumber = 600000000;
+  //   const {
+  //     phoneContext: { message },
+  //   } = useContext(Context);
 
   return (
     <>
-      <span className={handleChange()}>{phoneNumber} is Calling...</span>
+      <span>Calling...</span>
     </>
   );
 }

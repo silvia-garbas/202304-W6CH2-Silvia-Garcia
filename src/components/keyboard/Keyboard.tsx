@@ -1,31 +1,29 @@
-import { Key } from "../key/key";
-import { usePhone } from "../../hooks/use.phone";
+import { KeyItem } from "../key.item/Key.item";
 
 export function Keyboard() {
-  const numbers = ["9", "8", "7", "6", "5", "4", "3", "2", "1", "0", "Delete"];
-  const { phoneNumber, addNumber, deleteNumber } = usePhone();
-
-  const handleKeyPress = (number: string) => {
-    if (number === "Delete") {
-      deleteNumber();
-    } else {
-      addNumber(number);
-    }
-  };
+  const keyContainer = [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "0",
+    "Delete",
+  ];
 
   return (
-    <div className="keyboard-container">
-      <ol className="keyboard">
-        {numbers.map((item) => (
-          <Key
-            number={item}
-            key={item}
-            handleKeyPress={handleKeyPress}
-            disabled={phoneNumber.length >= 9 && item !== "Delete"}
-          />
-        ))}
-        <span className="number">{phoneNumber}</span>
-      </ol>
-    </div>
+    <>
+      <div className="keyboard-container">
+        <ol className="keyboard">
+          {keyContainer.map((item) => (
+            <KeyItem item={item} key={item}></KeyItem>
+          ))}
+        </ol>
+      </div>
+    </>
   );
 }

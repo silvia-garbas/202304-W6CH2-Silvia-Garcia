@@ -1,19 +1,20 @@
-import { useContext } from "react";
-import { Context } from "../../context/context";
+// import { useContext } from "react";
+// import { Context } from "../../context/context";
 
 export function Action() {
-  const {
-    phoneContext: { handleCall, handleHang },
-  } = useContext(Context);
+  // const {} = useContext(Context);
 
   return (
     <>
-      <a href="#" className="call" onClick={handleCall}>
-        Call
-      </a>
-      <a href="#" className="hang active" onClick={handleHang}>
-        Hang
-      </a>
+      {/* {isCalling ? (
+        <a href="#" className="hang" onClick={handleHang}>
+          Hang
+        </a>
+      ) : (
+        <a href="#" className="call active" onClick={handleCall}>
+          Call
+        </a>
+      )} */}
     </>
   );
 }
