@@ -5,7 +5,7 @@ export function Info() {
   const {
     phoneContext: { handleChange },
   } = useContext(Context);
-  const phoneNumber = 667359961;
+  const phoneNumber = 600000000;
 
   return (
     <>
