@@ -4,8 +4,10 @@ import { Display } from "../display/Display";
 export function Actions() {
   return (
     <>
-      <Display></Display>
-      <Action></Action>
+      <div className="actions">
+        <Display></Display>
+        <Action></Action>
+      </div>
     </>
   );
 }
